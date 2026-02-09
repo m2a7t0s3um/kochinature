@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>高知県自然スポット・マップ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+  <style>
+    body { margin: 0; font-family: sans-serif; }
+    #map { height: 100vh; }
+
+    .menu {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      background: white;
+      padding: 8px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    .menu button {
+      margin: 2px;
+      padding: 6px 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="menu">
+  <button onclick="filterCategory('all')">すべて</button>
+  <button onclick="filterCategory('sea')">海</button>
+  <button onclick="filterCategory('river')">川</button>
+  <button onclick="filterCategory('mountain')">山</button>
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
